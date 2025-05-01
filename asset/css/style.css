@@ -1,0 +1,311 @@
+/* Reset */
+* {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background wave */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+/* Capetan Hero Section */
+.capetan-hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-title {
+    height: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 150px;
+    padding-right: 7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    color: #1d4e89;
+}
+
+.cape {
+    color: #2787b7;
+    font-weight: bolder;
+}
+
+.tan {
+    color: #18597f;
+    font-weight: bolder;
+}
+
+.capetan-hero h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: #1d4e89;
+}
+
+.capetan-hero h2 em {
+    font-style: italic;
+    color: #155e75;
+}
+
+.capetan-hero strong {
+    font-weight: 700;
+    color: #0c4a6e;
+}
+
+header{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  .navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .nav-branding {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  
+  .hamburger {
+    padding-right: 1rem;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-menu {
+      text-align: right;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: -100%;
+      width: 200px;
+      padding-top: 20px;
+      padding-right: 2rem;
+      transition: right 0.3s ease;
+      height: calc(100vh - 60px);
+    }
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    /* Background wave */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        overflow: hidden;
+        z-index: -1;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+
+    .capetan-hero {
+        height: 55vh;
+        display: flex;
+        flex-direction: column; /* Stack logo and h1 vertically */
+        justify-content: center;
+        align-items: center;
+        gap: 0px; /* Adjust gap for a little more spacing between the logo and h1 */
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        margin-bottom: 0%;
+    }
+    
+    .logo-title {
+        margin-bottom: 0%;
+        height: auto; /* Ensure it adapts based on content */
+        display: flex;
+        flex-direction: column; /* Stack logo and h1 inside this container */
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        gap: 0rem;
+    }
+    
+    .logo {
+        margin-bottom: 0%;
+        width: 15rem;
+        height: auto;
+        object-fit: contain;
+        z-index: 10;
+    }
+    
+    h1 {
+        padding-bottom: 5rem;
+        padding-left: 7rem;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #1d4e89;
+        margin-top: 0; /* Ensure no extra space at the top */
+        text-align: center; /* Center the heading */
+    }
+    
+    .cape {
+        color: #2787b7;
+        font-weight: bolder;
+    }
+    
+    .tan {
+        color: #18597f;
+        font-weight: bolder;
+    }
+    
+    
+    .capetan-hero h2 {
+        font-size: 15px;
+        font-weight: 400;
+        color: #1d4e89;
+    }
+    
+    .capetan-hero h2 em {
+        font-style: italic;
+        color: #155e75;
+    }
+    
+    .capetan-hero strong {
+        font-weight: 700;
+        color: #0c4a6e;
+    }
+  }
+
+  /* Specific tweaks for iPhone 11, 12, 13, 14, 15, 16 (390x844 or similar) */
+@media (max-width: 400px) {
+    .logo {
+      width: 10rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .capetan-hero h2 {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Additional Android small screens (360px width) */
+  @media (max-width: 375px) {
+    .logo {
+      width: 9rem;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .capetan-hero {
+      padding: 0 0.5rem;
+    }
+  }
+  
+  /* Ultra small devices like older Android (320px) */
+  @media (max-width: 340px) {
+    .logo {
+      width: 8rem;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    .capetan-hero h2 {
+      font-size: 0.8rem;
+    }
+  }
+  
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+    z-index: 10;
+    position: relative;
+}

@@ -268,7 +268,12 @@ header{
     .capetan-hero h2 {
       font-size: 0.9rem;
     }
+
+    body, html {
+        overflow-x: hidden;
+    }
   }
+
   
   /* Additional Android small screens (360px width) */
   @media (max-width: 375px) {
@@ -283,6 +288,11 @@ header{
     .capetan-hero {
       padding: 0 0.5rem;
     }
+
+    body, html {
+        overflow-x: hidden;
+    }
+
   }
   
   /* Ultra small devices like older Android (320px) */
@@ -298,8 +308,112 @@ header{
     .capetan-hero h2 {
       font-size: 0.8rem;
     }
+
+    body, html {
+        overflow-x: hidden;
+    }
   }
   
+/* Responsive for iPhone 12 Mini (5.4-inch, 360x780) */
+@media only screen and (device-width: 360px) and (device-height: 780px),
+       only screen and (max-width: 380px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .nav-menu {
+    text-align: right;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    width: 200px;
+    padding-top: 20px;
+    padding-right: 2rem;
+    transition: right 0.3s ease;
+    height: calc(100vh - 60px);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .capetan-hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .logo-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    width: 15rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1d4e89;
+    margin: 0;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+
+  .cape {
+    color: #2787b7;
+    font-weight: bolder;
+  }
+
+  .tan {
+    color: #18597f;
+    font-weight: bolder;
+  }
+
+  .capetan-hero h2 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #1d4e89;
+  }
+
+  .capetan-hero h2 em {
+    font-style: italic;
+    color: #155e75;
+  }
+
+  .capetan-hero strong {
+    font-weight: 700;
+    color: #0c4a6e;
+  }
+}
+
 /* Footer */
 footer {
     margin-top: auto;
